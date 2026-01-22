@@ -264,22 +264,28 @@
       }
     }
 
-    /* TEST: wenn das NICHT sichtbar ist, wird dein Code nicht geladen */
-.card{
-  outline: 3px solid red !important;
+/* Premium Effekt nur für die Steps */
+.step-card{
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  transform: translateY(0);
+  cursor: pointer;
 }
 
-/* Effekt (Laptop) */
-.card:hover{
-  transform: translateY(-10px) !important;
+.step-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(0,0,0,0.38);
+  border-color: rgba(214,180,106,0.32);
 }
 
-/* Effekt (Handy beim Antippen) */
+/* Handy: beim Antippen sichtbar */
 @media (hover: none){
-  .card:active{
-    transform: translateY(-10px) !important;
+  .step-card:active{
+    transform: translateY(-4px);
+    box-shadow: 0 26px 60px rgba(0,0,0,0.38);
+    border-color: rgba(214,180,106,0.32);
   }
 }
+
 
   </style>
 </head>
@@ -309,22 +315,22 @@
     </p>
 
     <div class="grid">
-      <div class="card">
+      <div class="card step-card">
         <h2>✅ 1) Nachricht senden</h2>
         <p>Du schreibst uns kurz auf WhatsApp (z.B. welches Produkt du willst oder welche Frage du hast).</p>
       </div>
 
-      <div class="card">
+      <div class="card step-card">
         <h2>✅ 2) Auswahl & Bestätigung</h2>
         <p>Wir schicken dir Bilder/Details, Verfügbarkeit und den Gesamtpreis (inkl. Versand) – du bestätigst.</p>
       </div>
 
-      <div class="card">
+      <div class="card step-card">
         <h2>✅ 3) Versand aus Deutschland</h2>
         <p>Nach Bestätigung verpacken wir sorgfältig und senden zuverlässig innerhalb Deutschlands.</p>
       </div>
 
-      <div class="card">
+      <div class="card step-card">
         <h2>✅ 4) Update & Support</h2>
         <p>Du bekommst Updates und kannst jederzeit nachfragen – wir antworten direkt.</p>
       </div>

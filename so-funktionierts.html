@@ -263,6 +263,24 @@
         grid-column: span 12;
       }
     }
+
+    /* TEST: wenn das NICHT sichtbar ist, wird dein Code nicht geladen */
+.card{
+  outline: 3px solid red !important;
+}
+
+/* Effekt (Laptop) */
+.card:hover{
+  transform: translateY(-10px) !important;
+}
+
+/* Effekt (Handy beim Antippen) */
+@media (hover: none){
+  .card:active{
+    transform: translateY(-10px) !important;
+  }
+}
+
   </style>
 </head>
 

@@ -407,14 +407,13 @@ footer{
   opacity: 0.9;
 }
 
-
 #toTop{
   position: fixed;
   bottom: 22px;
   right: 22px;
 
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
 
   background: rgba(214,180,106,0.18);
@@ -425,18 +424,20 @@ footer{
   font-weight: 900;
 
   cursor: pointer;
-
   display: none;
   z-index: 9999;
 
   backdrop-filter: blur(10px);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
 
-  /* 🔥 DAS ist wichtig */
   display: flex;
   align-items: center;
   justify-content: center;
+
+  line-height: 1;
+  transform: translateY(-1px);
 }
+
 
 
 #toTop:hover{

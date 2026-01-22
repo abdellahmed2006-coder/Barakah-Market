@@ -183,6 +183,37 @@ footer{
   color: var(--muted2);
   border-top: 1px solid rgba(255,255,255,0.08);
 }
+  /* Produkte-Karten (Bald verfügbar) */
+.products{
+  margin-top: 22px;
+}
+
+.product-card{
+  position: relative;
+  text-align: left;
+  padding-top: 34px;
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+.product-card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.badge{
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .6px;
+  color: rgba(255,255,255,0.92);
+  background: rgba(214,180,106,0.14);
+  border: 1px solid rgba(214,180,106,0.28);
+}
+
 </style>
 
 </head>
@@ -241,12 +272,40 @@ footer{
   </div>
 </section>
 
-<section>
+<section id="produkte">
   <h2>Produkte</h2>
   <p class="subtitle">
     ✨ Bald verfügbar – unsere erste Auswahl befindet sich aktuell in Vorbereitung.
   </p>
+
+  <div class="box products">
+    <div class="card product-card">
+      <div class="badge">Bald verfügbar</div>
+<h3>Mützen & Kopfbedeckungen</h3>
+      <p>Verschiedene Designs – bequem & hochwertig.</p>
+    </div>
+
+    <div class="card product-card">
+      <div class="badge">Bald verfügbar</div>
+      <h3>🕌 Gebetsteppiche</h3>
+      <p>Schöne Muster – weich, sauber verarbeitet.</p>
+    </div>
+
+    <div class="card product-card">
+      <div class="badge">Bald verfügbar</div>
+      <h3>🌿 Itr / Duftöl</h3>
+      <p>Ausgewählte Düfte – angenehm & elegant.</p>
+    </div>
+
+    <div class="card product-card">
+      <div class="badge">Bald verfügbar</div>
+      <h3>📿 Tasbih</h3>
+      <p>Schlicht & edel – perfekt als Geschenk.</p>
+    </div>
+  </div>
 </section>
+
+
 
 <footer>
   © 2026 Noor Essence

@@ -334,18 +334,22 @@ footer{
     font-size: 14px;
     border-radius: 999px;
   }
+/* Buttons nebeneinander (nur Handy) */
+.btn-group{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
 
-  .cta-buttons{
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-  }
+.btn-group .btn{
+  width: 48%;
+  max-width: none;
+  padding: 14px 10px;
+  font-size: 15px;
+  white-space: nowrap;
+}
 
-  .cta-buttons .btn{
-    width: 48%;
-    padding: 14px 10px;
-    font-size: 15px;
-  }
+
 }
 
 

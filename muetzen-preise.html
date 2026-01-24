@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mützen – Produkte & Preise | Noor Essence</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root{
+      --bg1:#0b1220; --bg2:#020617;
+      --text:#ffffff; --muted:#cbd5e1; --muted2:#94a3b8;
+      --gold:#d6b46a;
+      --card: rgba(255,255,255,0.045);
+      --border: rgba(255,255,255,0.10);
+      --btn1:#22c55e; --btn2:#16a34a;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0; font-family:"Segoe UI", Arial, sans-serif;
+      color:var(--text); text-align:center;
+      background:
+        radial-gradient(900px 520px at 50% -10%, rgba(214,180,106,0.14), transparent 60%),
+        radial-gradient(1200px 720px at 12% 22%, rgba(56,189,248,0.10), transparent 55%),
+        radial-gradient(950px 650px at 88% 40%, rgba(34,197,94,0.07), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+    }
+
+    .topbar{
+      position: sticky; top:0; z-index:999;
+      background: rgba(2,6,23,0.75);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display:flex; justify-content:space-between; align-items:center;
+      padding: 14px 22px;
+    }
+    .logo-link{ display:inline-flex; align-items:center; text-decoration:none; color:inherit; }
+    .brand-box{ display:flex; align-items:center; gap:12px; }
+    .logo-circle{
+      width:42px; height:42px; border-radius:50%;
+      border:2px solid var(--gold); color:var(--gold);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900; letter-spacing:1px; font-size:14px;
+    }
+    .brand-text{ display:flex; flex-direction:column; text-align:left; }
+    .brand{
+      font-weight:800; font-size:14px; letter-spacing:3px;
+      text-transform:uppercase; color:var(--gold); white-space:nowrap;
+    }
+    .tagline{
+      font-size:13px; letter-spacing:1.5px;
+      color: rgba(255,255,255,0.55); font-weight:600;
+    }
+    .whatsapp-btn{
+      background: linear-gradient(135deg, var(--btn1), var(--btn2));
+      color:#03120a;
+      padding:10px 16px; border-radius:14px;
+      text-decoration:none; font-weight:800;
+      border:1px solid rgba(255,255,255,0.10);
+      box-shadow:0 14px 28px rgba(0,0,0,0.25);
+      white-space:nowrap;
+    }
+
+    .wrap{ max-width: 1040px; margin:0 auto; padding: 52px 18px 70px; }
+    h1{
+      font-size: clamp(34px, 5vw, 54px);
+      margin: 0 0 10px; font-weight:900;
+    }
+    .line{
+      width:86px; height:2px; margin:14px auto 18px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      border-radius: 999px;
+    }
+    .subtitle{
+      color: var(--muted);
+      font-size: 18px; line-height: 1.75;
+      max-width: 760px; margin: 0 auto 28px;
+    }
+
+    .box{
+      max-width: 1040px;
+      margin: 26px auto 0;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      text-align:left;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 46px rgba(0,0,0,0.25);
+    }
+
+    .imgbox{
+      width:100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 16px;
+      border: 1px dashed rgba(255,255,255,0.18);
+      display:flex; align-items:center; justify-content:center;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 14px;
+      overflow:hidden;
+    }
+    .imgbox img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+    .price-row{
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap: 12px; margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .price{
+      font-weight:900;
+      color: rgba(214,180,106,0.95);
+      font-size: 18px;
+      white-space:nowrap;
+    }
+    .small{
+      color: rgba(255,255,255,0.60);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .actions{
+      display:flex; gap: 12px;
+      justify-content:center; flex-wrap:wrap;
+      margin-top: 26px;
+    }
+    .btn{
+      display:inline-block;
+      padding: 14px 22px;
+      border-radius: 16px;
+      text-decoration:none;
+      font-weight: 900;
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--btn1), var(--btn2));
+      color:#03120a;
+    }
+    .btn.secondary{
+      background: transparent;
+      color: #22c55e;
+      border: 1px solid rgba(34,197,94,0.55);
+    }
+
+    footer{
+      margin-top: 44px;
+      padding: 26px 16px;
+      font-size: 14px;
+      color: var(--muted2);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align:center;
+    }
+
+    @media (max-width:700px){
+      .topbar{ padding:12px 14px; }
+      .logo-circle{ width:38px; height:38px; font-size:13px; }
+      .brand{ font-size:13px; letter-spacing:2px; }
+      .tagline{ font-size:11px; opacity:.75; margin-top:2px; }
+      .whatsapp-btn{ padding:10px 18px; font-size:14px; border-radius:999px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <a href="index.html" class="logo-link">
+      <div class="brand-box">
+        <div class="logo-circle">NE</div>
+        <div class="brand-text">
+          <div class="brand">NOOR ESSENCE</div>
+          <div class="tagline">نور • Qualität • Vertrauen</div>
+        </div>
+      </div>
+    </a>
+
+    <a class="whatsapp-btn" href="https://wa.me/4917640523392" target="_blank">WhatsApp</a>
+  </div>
+
+  <div class="wrap">
+    <h1>Mützen – Produkte & Preise</h1>
+    <div class="line"></div>
+
+    <p class="subtitle">
+      Hier kommen später Bilder und Preise rein. Jetzt ist es erstmal eine Vorlage.
+    </p>
+
+    <!-- HIER IST DEIN 1 PRODUKT -->
+    <div class="box">
+
+      <div class="card">
+        <div class="imgbox">Bild kommt später</div>
+        <h3>Classic Gebetsmütze</h3>
+        <div class="small">Farbe: Weiß • Größe: One Size</div>
+
+        <div class="price-row">
+          <div class="small">Bald verfügbar</div>
+          <div class="price">— €</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="actions">
+      <a class="btn secondary" href="muetzen.html">← Zurück</a>
+      <a class="btn primary"
+         href="https://wa.me/4917640523392?text=Salam%20alaikum%20%F0%9F%8C%99%0AIch%20interessiere%20mich%20für%20Mützen.%20Habt%20ihr%20schon%20Preise%20und%20Bilder%3F"
+         target="_blank">
+        Per WhatsApp fragen
+      </a>
+    </div>
+
+    <footer>© 2026 Noor Essence</footer>
+  </div>
+
+</body>
+</html>
